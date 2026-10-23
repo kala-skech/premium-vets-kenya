@@ -8,20 +8,23 @@
     
 </head>
 <body>
-     <main>
+    <main>
          <header>
         <div class="container">
             <div class="image">
                  <img  class="image" src="image.html/Black White Modern Letter A Logo Design_20260224_151953_0000.png" >  
            
             </div>
-            <nav>
+            <nav class="hero">
                 <ul>
                     <li><a href="HTML.SUB1/home.html">Home</a></li>
                     <li><a href="HTML.SUB1/services.html">Services</a></li>
                     <li><a href="HTML.SUB1/about.html">About Us</a></li>
                     <li ><a href="HTML.SUB1/book.html">Book a vet</a></li>
-                </ul> 
+                </ul>
+                <span></span> 
+            </nav>
+                
 
 
         </div>
@@ -33,7 +36,14 @@
         }
 
         header {
-            background-color: #eaeaea;
+            background-color:green;
+             position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+
+
         }
         .container {
             display: flex;
@@ -42,24 +52,54 @@
             padding: 10px 20px;
             margin: 0 auto;
             max-width: 1200px;
-
+           
         
         }
-        li {
+        .hero {
+            margin-top: 10px;
+            display: inline-flex;
+            background-color: green;
+            border-radius: 10%;
+        }
+        
+        
+        .hero li {
             display: inline-block;
             margin-right: 20px;
             
         }
 
-        li a {
+        .hero li a {
             text-decoration: none;
             color: black;
             font-weight: bold;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
         }
-        .li a:hover {
-            background-color: goldenrod;
+        .hero span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:green;
+            border-radius: 10% ;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+        .hero li:nth-child(1):hover~ span { left: 0px; }
+        .hero li:nth-child(2):hover~ span { left: 100px;}
+        .hero li:nth-child(3):hover~ span { left: 200px; }
+        .hero li:nth-child(4):hover~ span { left: 300px; }
+
+        
+
+    
+        .hero li a:hover {
+            background-color: rgb(65, 200, 224);
             color: black;
-            border-radius: 25px;
+            border-radius: 10%;
             
         }
         @media all and(max-width: 720px)
@@ -68,11 +108,11 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
-            nav{
+            .hero {
                 margin-top: 10px;
                 width: 100%;
             }
-            li {
+            .hero li {
                 margin-right: 0;
                 margin-bottom: 10px;
                 display: block;
@@ -93,9 +133,7 @@
 
     
     </main>
-    
-    
-    <main class="body"> 
+   <main class="body"> 
     <h2 class="title">PREMIUM VETERINARIANS KENYA</h2>
     <p class="hero-1">Welcome to our veterinary services website! We are dedicated to providing top-notch care.</p>
     <p class="hero-1">For your beloved pets. Our team of experienced veterinarians is here to ensure the health and well-being of your furry friends.</p>
@@ -261,7 +299,7 @@
         <p class="footer">Follow us on social media: Facebook, Twitter, Instagram,whatsapp,what's app channel and LinkedIn at @premiumvetskenya</p>
         <p class="footer">Disclaimer: The information provided on this website is for general informational purposes only and should not be considered as professional veterinary advice. Always consult with a qualified veterinarian for specific concerns regarding your pets' health.</p>
     </div>
-    <a href="https://whatsapp.com/channel/0029Vb6jR1623n3kNOXO9e2S" target="_blank" title="Chat on WhatsApp channel">
+    <a href="https://whatsapp.com/channel/0029Vb6jR1623n3kNOXO9e2S" class="wa-float" target="blank" title="Chat on WhatsApp channel">
         <img class="whatsapp" src="image.html/pngtree-whatsapp-icon-new-png-image_6315990.png"  /> </a>
 
 </main>
